@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Your list</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+    </ion-list>
+<ion-card>
+  <ion-item>
+    <ion-list *ngFor="let item of list" let i=index;>
+      <ion-item>
+          {{item.username}}. Name: {{item.itemName}}  ,Price: {{item.price}} bahts
+      </ion-item>
+    </ion-list>
+  </ion-item>
+  <ion-item>
+      <ion-label> Result :</ion-label>
+  </ion-item>
+  <ion-item>
+      <ion-label> Remains(can be used) :</ion-label>
+  </ion-item>
+</ion-card>
+<ion-button routerLink="/home/" routerDirection= "forward">
+  <ion-icon name="home"></ion-icon>
+</ion-button><ion-button routerLink="/history/" routerDirection= "forward">history</ion-button>
+</ion-content>
